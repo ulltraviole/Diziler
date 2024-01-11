@@ -17,21 +17,15 @@
             count = Convert.ToInt32(Console.ReadLine());
             Console.Write("\n");
             int[] numbers = new int[count];
-            int Random()
-            {
-                return rnd.Next(starting, ending);
-            }
             for (int i = 0; i < count; i++)
             {
-                int rndnm = Random();
-                foreach (int number in numbers)
+                int rndmnm;
+                do
                 {
-                    if (number == rndnm)
-                    {
-                        rndnm = Random();
-                    }
+                    rndmnm = rnd.Next(starting, ending);
                 }
-                numbers[i] = rndnm;
+                while (Array.IndexOf(numbers, rndmnm) != -1);
+                numbers[i] = rndmnm;
             }
             Array.Sort(numbers);
             for (int i = 0; i < numbers.Length; i++)
