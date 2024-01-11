@@ -5,15 +5,12 @@
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            bool english = false;
             int starting, ending, count;
-            Console.Write("Hello! For English, please press \"E\" key: ");
-            english = Console.ReadKey().KeyChar.ToString().ToUpper() == "E";
-            Console.WriteLine(!english ? "\nBaslangic sayisini giriniz." : "\nEnter the starting number.");
+            Console.WriteLine("Enter the starting number.");
             starting = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(!english ? "Bitis sayisini giriniz." : "Enter the ending number.");
+            Console.WriteLine("Enter the ending number.");
             ending = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(!english ? "Listede kaç sayı olsun?" : "How many numbers are on the list?");
+            Console.WriteLine("How many numbers are on the list?");
             count = Convert.ToInt32(Console.ReadLine());
             Console.Write("\n");
             int[] numbers = new int[count];
